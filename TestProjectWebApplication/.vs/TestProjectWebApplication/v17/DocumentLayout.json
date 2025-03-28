@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{B5BF83A8-74CF-409D-94D3-74ACBE1F48E2}|TestProjectWebApplication\\TestProjectWebApplication.csproj|solutionrelative:testprojectwebapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5BF83A8-74CF-409D-94D3-74ACBE1F48E2}|TestProjectWebApplication\\TestProjectWebApplication.csproj|c:\\users\\\u0430\u043B\u0435\u043A\u0441\u0430\u043D\u0434\u0440\\source\\repos\\testprojectwebapplication\\testprojectwebapplication\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5BF83A8-74CF-409D-94D3-74ACBE1F48E2}|TestProjectWebApplication\\TestProjectWebApplication.csproj|solutionrelative:testprojectwebapplication\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B5BF83A8-74CF-409D-94D3-74ACBE1F48E2}|TestProjectWebApplication\\TestProjectWebApplication.csproj|c:\\users\\\u0430\u043B\u0435\u043A\u0441\u0430\u043D\u0434\u0440\\source\\repos\\testprojectwebapplication\\testprojectwebapplication\\tododb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5BF83A8-74CF-409D-94D3-74ACBE1F48E2}|TestProjectWebApplication\\TestProjectWebApplication.csproj|solutionrelative:testprojectwebapplication\\tododb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5BF83A8-74CF-409D-94D3-74ACBE1F48E2}|TestProjectWebApplication\\TestProjectWebApplication.csproj|c:\\users\\\u0430\u043B\u0435\u043A\u0441\u0430\u043D\u0434\u0440\\source\\repos\\testprojectwebapplication\\testprojectwebapplication\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5BF83A8-74CF-409D-94D3-74ACBE1F48E2}|TestProjectWebApplication\\TestProjectWebApplication.csproj|solutionrelative:testprojectwebapplication\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,20 +30,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "TodoDb.cs",
               "DocumentMoniker": "C:\\Users\\\u0410\u043B\u0435\u043A\u0441\u0430\u043D\u0434\u0440\\source\\repos\\TestProjectWebApplication\\TestProjectWebApplication\\TodoDb.cs",
               "RelativeDocumentMoniker": "TestProjectWebApplication\\TodoDb.cs",
               "ToolTip": "C:\\Users\\\u0410\u043B\u0435\u043A\u0441\u0430\u043D\u0434\u0440\\source\\repos\\TestProjectWebApplication\\TestProjectWebApplication\\TodoDb.cs",
               "RelativeToolTip": "TestProjectWebApplication\\TodoDb.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T11:37:31.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-17T11:37:31.849Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Todo.cs",
               "DocumentMoniker": "C:\\Users\\\u0410\u043B\u0435\u043A\u0441\u0430\u043D\u0434\u0440\\source\\repos\\TestProjectWebApplication\\TestProjectWebApplication\\Todo.cs",
               "RelativeDocumentMoniker": "TestProjectWebApplication\\Todo.cs",
@@ -51,8 +50,7 @@
               "RelativeToolTip": "TestProjectWebApplication\\Todo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T11:35:39.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-17T11:35:39.541Z"
             },
             {
               "$type": "Document",
@@ -62,7 +60,7 @@
               "RelativeDocumentMoniker": "TestProjectWebApplication\\Program.cs",
               "ToolTip": "C:\\Users\\\u0410\u043B\u0435\u043A\u0441\u0430\u043D\u0434\u0440\\source\\repos\\TestProjectWebApplication\\TestProjectWebApplication\\Program.cs",
               "RelativeToolTip": "TestProjectWebApplication\\Program.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAiwI4AAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAAAF4AAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-17T11:12:25.562Z",
               "EditorCaption": ""
