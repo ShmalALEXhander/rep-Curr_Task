@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging.Console;
 using System;
 using TestProjectWebApplication;
 
-//Вопросы:Почему присвоенное id каждому объекту сквозное?
+//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ id пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ?
 var builder = WebApplication.CreateBuilder(args);
 builder.Logging.AddConsole();
 
@@ -15,13 +15,13 @@ object value = builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 var app = builder.Build();
 
-//Корневые катологи и категории///////////////////////////////////
-//GET-ЗАПРОС
-//app.MapGet("/",() => Console.WriteLine("Hello World!"));//Нет формочек, видимо поэтому не видно строку. Скорее всего дело в классе Console
+//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ///////////////////////////////////
+//GET-пїЅпїЅпїЅпїЅпїЅпїЅ
+//app.MapGet("/",() => Console.WriteLine("Hello World!"));//пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ Console
 app.MapGet("/", async (ILogger<Program> logger, HttpResponse response) =>//+++++++
 {
     await response.WriteAsync("Hello World");
-    logger.LogInformation("Project Launched!!!");//Смысл в таком логере есть.
+    logger.LogInformation("Project Launched!!!");//пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ.
 });
 app.MapGet("/todoitems", async (TodoDb db) => { await db.Todos.ToListAsync(); });
 app.MapGet("/todoitems/completes", async (TodoDb db, ILogger <Program> logger) => {
@@ -67,8 +67,8 @@ app.MapGet("/todoitems/falses/{id}", async (int id, TodoDb db, ILogger <Program>
         return Results.StatusCode(StatusCodes.Status500InternalServerError);
     }
 });
-//POST-запросы
-//Пояснение: Предлагаю по причинам удобства
+//POST-пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 app.MapPost("/todoitems/completes", async (int? id, Todo todo, TodoDb db) =>
 { //curl -X POST "http://localhost:5091/todoitems/completes" -H "Content-Type: application/json" -d "{\"id\":2, \"Name\":\"Task\", \"IsComplete\":true}"
     
@@ -91,7 +91,7 @@ app.MapPost("/todoitems/completes/{id}", async (int? id, Todo todo, TodoDb db) =
     else
     {
         db.Todos.Add(todo);
-        await db.SaveChangesAsync(); //Вот тут подробней.
+        await db.SaveChangesAsync(); //пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
         return Results.Created($"/todoitems/completes/{todo.Id}", todo);
     }
 });
@@ -102,13 +102,13 @@ app.MapPost("/todoitems/falses", async (Todo todo, TodoDb db) =>
     return Results.Created($"/todoitems/falses/{todo.Id}", todo);
 });
 app.MapPost("/todoitems/falses/{id}", async (Todo todo, TodoDb db) =>
-{//curl -X POST "http://localhost:5091/todoitems/falses/1" -H "Content-Type: application/json" -d "{\"Name\":\"FTask\", \"IsComplete\":false}" //без id в curl не сработает
+{//curl -X POST "http://localhost:5091/todoitems/falses/1" -H "Content-Type: application/json" -d "{\"Name\":\"FTask\", \"IsComplete\":false}" //пїЅпїЅпїЅ id пїЅ curl пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     db.Todos.Add(todo);
     await db.SaveChangesAsync();
     return Results.Created($"/todoitems/falses/{todo.Id}", todo);
 });
 
-//Запрос-Удаление
+//пїЅпїЅпїЅпїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 app.MapDelete("/todoitems/completes/{id}", async (int id, TodoDb db) =>
 {   //curl -X DELETE "http://localhost:5091/todoitems/completes/{id}"
     if (await db.Todos.FindAsync(id) is Todo todo)
@@ -132,7 +132,7 @@ app.MapDelete("/todoitems/falses/{id}", async (int id, TodoDb db) =>
 //app.MapGet("/todoitems/{id}/completes/{subid}", async (int id, int subid, TodoDb db) =>
 //{
 
-//    // Возвращаем найденную подзадачу
+//    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 //});
 
 app.MapPost("/todoitems/{id}/completes/{subid}", async (int id, int subid, TodoDb db, Todo todo) =>
@@ -143,4 +143,4 @@ app.MapPost("/todoitems/{id}/completes/{subid}", async (int id, int subid, TodoD
     await db.SaveChangesAsync();
     return Results.Created($"/todoitems/{todo.Id}/completes/{todo.SubId}", todo);
 });
-app.Run(); //"Слушает"
+app.Run(); //"пїЅпїЅпїЅпїЅпїЅпїЅпїЅ"
