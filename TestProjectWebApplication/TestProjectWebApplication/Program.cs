@@ -107,7 +107,7 @@ app.MapPost("/todoitems/falses/{id}", async (Todo todo, TodoDb db) =>
     await db.SaveChangesAsync();
     return Results.Created($"/todoitems/falses/{todo.Id}", todo);
 });
-//PUT-запросы 
+
 //Запрос-Удаление
 app.MapDelete("/todoitems/completes/{id}", async (int id, TodoDb db) =>
 {   //curl -X DELETE "http://localhost:5091/todoitems/completes/{id}"
